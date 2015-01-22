@@ -8,8 +8,10 @@ big_int = 600851475143
 #big_int = 13195
 
 def main():
+    """in case big_int is prime"""
     if is_prime(big_int) == True:
         return big_int  
+    """brute force from the lower side, look for factors, check if the cofactor is prime"""
     for i in xrange(2,int(big_int/2)):
         if big_int%i == 0:
             if is_prime(big_int/i) == True: 
