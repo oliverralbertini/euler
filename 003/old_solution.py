@@ -12,6 +12,9 @@ def main():
     if is_prime(big_int) == True:
         return big_int  
     """brute force from the lower side, look for factors, check if the cofactor is prime"""
+    #if big_int%2 == 0:
+        #if is_prime(big_int/2) == True:
+            #return big_int/2
     for i in xrange(2,int(big_int/2)):
         if big_int%i == 0:
             if is_prime(big_int/i) == True: 
