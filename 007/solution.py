@@ -5,6 +5,7 @@
 import sys
 sys.path.append('../modules')
 from isprime import is_prime
+import time as t
 
 def prime_search():
     primes=[2,3]
@@ -14,5 +15,8 @@ def prime_search():
             primes.append(number)
         number+=2
     return primes[10000]
-
+start = t.time()
 print prime_search()
+end = t.time()
+elapsed = end-start
+print "Time needed:", elapsed,"."
